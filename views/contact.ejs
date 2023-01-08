@@ -1,7 +1,10 @@
 <%- include("partials/header") -%>
 
-<h1>Contact</h1>
-
-<p><%= contactContent %></p>
+<% posts.forEach((post) => {%>
+    <h1><%= post.title %></h1>
+    <p class="inline">
+        <%= post.content %>
+    </p>
+<% }); %>
 
 <%- include("partials/footer") -%>
